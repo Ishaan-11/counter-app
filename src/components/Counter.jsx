@@ -8,25 +8,28 @@ function Counter(props) {
       <div className="col-md-1">
         <span 
           style={{ fontSize: 24 }} 
-          className={`badge m-2 badge-${props.counter.value === 0 ? "warning" : "primary"}`}
+          className={`badge m-2 badge-${props.value === 0 ? "warning" : "primary"}`}
         >
-          {props.counter.value || "Zero"}
+          {props.value || "Zero"}
         </span>
       </div>
       <div className="col-md-4">
         <button
           className="btn btn-secondary"
+          onClick={() => props.onIncrementDecrement(props.id, true)}
         >
           <FontAwesomeIcon icon={faPlusCircle} />
         </button>
         <button
           className="btn btn-info m-2"
-          disabled={props.counter.value === 0 ? "disabled" : ""}
+          disabled={props.value === 0 ? "disabled" : ""}
+          onClick={() => props.onIncrementDecrement(props.id, false)}
         >
           <FontAwesomeIcon icon={faMinusCircle} />
         </button>
         <button
           className="btn btn-danger"
+          onClick={() => props.onDelete(props.id)}
         >
           <FontAwesomeIcon icon={faTrashAlt} />
         </button>
