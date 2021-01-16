@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Counters from "./components/Counters";
 import Navbar from "./components/Navbar";
 
 function App() {
@@ -14,6 +15,11 @@ function App() {
   return (
     <div>
       <Navbar totalCounters={counters.filter(item => item.value > 0).length} />
+      <main className="container">
+        <Counters
+          counters={counters}
+        />
+      </main>
     </div>
   );
 }
