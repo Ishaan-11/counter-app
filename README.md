@@ -6,7 +6,7 @@
 
 ## Live URL :-
 
-> [Counter App](https://obscure-waters-60500.herokuapp.com)
+> [Counter App](https://ishaan11-counter-app.netlify.app)
 
 **OR your can do the following to run in your local machine**
 
